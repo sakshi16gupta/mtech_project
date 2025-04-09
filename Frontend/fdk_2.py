@@ -58,6 +58,8 @@ for idx, message in enumerate(st.session_state.messages):
         if feedback_text:
             st.success("Thanks for your feedback!")
             # Optionally save feedback here
+            print("#"*50)
+            print(os.curdir)
             os.chdir(f'{os.path.abspath(os.curdir)}/Inferencing')
             run_feedback(json.dumps({
                     "fdk_request": {
