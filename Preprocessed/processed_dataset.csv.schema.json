@@ -1,0 +1,22 @@
+{
+  "fields": [
+    {
+      "name": "WO Description",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "WO rem long desc",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "Cause object",
+      "type": "string",
+      "format": "default"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}
