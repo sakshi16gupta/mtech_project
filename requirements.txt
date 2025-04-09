@@ -1,0 +1,8 @@
+pandas
+streamlit==1.43.2
+nltk
+regex
+sentence-transformers
+accelerate
+joblib
+autocorrect
