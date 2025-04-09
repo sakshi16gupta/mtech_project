@@ -1,0 +1,40 @@
+{
+  "columns": [
+    {
+      "minWidth": 40,
+      "download": false,
+      "formatter": "rowSelection",
+      "titleFormatter": "rowSelection",
+      "resizable": true,
+      "headerSort": false,
+      "width": 50
+    },
+    {
+      "field": "WO Description",
+      "title": "WO Description",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 352
+    },
+    {
+      "field": "WO rem long desc",
+      "title": "WO rem long desc",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 1366
+    },
+    {
+      "field": "Cause object",
+      "title": "Cause object",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 147
+    }
+  ]
+}
