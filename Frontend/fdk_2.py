@@ -26,11 +26,11 @@ if user_input:
     # Append user message
     st.session_state.messages.append({"role": "user", "content": user_input})
 
-    os.chdir(f'{os.path.abspath(os.curdir)}/Inferencing')
+    os.chdir('./Inferencing')
     response = json.loads(run_search(json.dumps({ 
             "data": [user_input]
         })))["fdk_response"]
-    os.chdir(f'{os.path.abspath(os.curdir)}/Frontend')
+    os.chdir('./Frontend')
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Display chat and feedback
@@ -60,7 +60,7 @@ for idx, message in enumerate(st.session_state.messages):
             # Optionally save feedback here
             print("#"*50)
             print(os.curdir)
-            os.chdir(f'{os.path.abspath(os.curdir)}/Inferencing')
+            os.chdir('./Inferencing')
             run_feedback(json.dumps({
                     "fdk_request": {
                         "query_id": "8357dff9-1ab1-458b-bc30-bd193ae820d6-20250409",
@@ -73,5 +73,5 @@ for idx, message in enumerate(st.session_state.messages):
                         }
                     }
                 }) )
-            os.chdir(f'{os.path.abspath(os.curdir)}/Frontend')
+            os.chdir('./Frontend')
             st.session_state.feedback_given[idx] = "submitted"
