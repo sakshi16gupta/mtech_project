@@ -6,4 +6,3 @@ sentence-transformers
 accelerate
 joblib
 autocorrect
-pytorch
