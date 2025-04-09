@@ -25,12 +25,10 @@ user_input = st.chat_input("Say something...")
 if user_input:
     # Append user message
     st.session_state.messages.append({"role": "user", "content": user_input})
-    print(os.path.abspath(os.curdir))
-    os.chdir('./Inferencing')
     response = json.loads(run_search(json.dumps({ 
             "data": [user_input]
         })))["fdk_response"]
-    os.chdir('./Frontend')
+    print(os.path.abspath(os.curdir))
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Display chat and feedback
