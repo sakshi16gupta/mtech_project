@@ -28,7 +28,6 @@ if user_input:
     response = json.loads(run_search(json.dumps({ 
             "data": [user_input]
         })))["fdk_response"]
-    print(os.path.abspath(os.curdir))
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Display chat and feedback
@@ -56,9 +55,6 @@ for idx, message in enumerate(st.session_state.messages):
         if feedback_text:
             st.success("Thanks for your feedback!")
             # Optionally save feedback here
-            print("#"*50)
-            print(os.curdir)
-            os.chdir('./Inferencing')
             run_feedback(json.dumps({
                     "fdk_request": {
                         "query_id": "8357dff9-1ab1-458b-bc30-bd193ae820d6-20250409",
@@ -71,5 +67,4 @@ for idx, message in enumerate(st.session_state.messages):
                         }
                     }
                 }) )
-            os.chdir('./Frontend')
             st.session_state.feedback_given[idx] = "submitted"
