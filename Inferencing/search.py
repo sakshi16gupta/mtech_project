@@ -355,7 +355,7 @@ def run_search(raw_data):
         res.data = json.loads(raw_data)['data']
 
         # Invoking run function of tenant specific object
-        feedback_data = read_prediction_files("./feedback/")
+        feedback_data = read_prediction_files("Inferencing/feedback/")
         print("Feedback data:", feedback_data)
         tenant = TenantSearchClass()
         process_data, combined_results = tenant.tenant_run(res.data,feedback_data)
