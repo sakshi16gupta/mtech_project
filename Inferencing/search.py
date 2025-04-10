@@ -1,3 +1,4 @@
+import streamlit as st
 import json
 from typing import Any
 from dataclasses import dataclass,field
@@ -343,7 +344,7 @@ def file_operation(process_data,outputlist):
     return new_record.query_id
 
 import traceback
-
+@st.cache_resource
 def run_search(raw_data):
     # Search Response Object
     res = SearchResponse()
