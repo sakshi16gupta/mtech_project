@@ -7,6 +7,7 @@ sys.path.append(os.path.abspath(os.curdir)+"/")
 from Inferencing.search import run_search
 from Inferencing.feedback import run_feedback
 
+@st.cache_resource
 st.set_page_config(page_title="Chatbot with Feedback")
 
 st.title("🤖 Chatbot with Feedback")
@@ -25,7 +26,6 @@ user_input = st.chat_input("Say something...")
 if user_input:
     # Append user message
     st.session_state.messages.append({"role": "user", "content": user_input})
-    @st.cache_resource
     response = json.loads(run_search(json.dumps({ 
             "data": [user_input]
         })))["fdk_response"]
