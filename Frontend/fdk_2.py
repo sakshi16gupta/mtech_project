@@ -7,7 +7,6 @@ sys.path.append(os.path.abspath(os.curdir)+"/")
 from Inferencing.search import run_search
 from Inferencing.feedback import run_feedback
 
-@st.cache_resource
 st.set_page_config(page_title="Chatbot with Feedback")
 
 st.title("🤖 Chatbot with Feedback")
