@@ -25,6 +25,7 @@ user_input = st.chat_input("Say something...")
 if user_input:
     # Append user message
     st.session_state.messages.append({"role": "user", "content": user_input})
+    @st.cache_resource
     response = json.loads(run_search(json.dumps({ 
             "data": [user_input]
         })))["fdk_response"]
