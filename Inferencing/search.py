@@ -129,10 +129,10 @@ class TenantSearchClass:
         self.CDL_PREDICTION_FOLDER = "/Prediction/US3"
         self.spell: Any
 
-        model_path="../ModelTraining"
+        model_path="/ModelTraining"
 
         # Loading Issue data
-        issue_data_path = "../Preprocessed/processed_dataset.csv"
+        issue_data_path = "/Preprocessed/processed_dataset.csv"
         self.issue_data = pd.read_csv(issue_data_path)
 
         # Loading Symmetric Semantic Search Model
