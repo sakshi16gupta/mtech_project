@@ -143,7 +143,7 @@ class TenantSearchClass:
         # Quickfix validation for Gen2 migration 
         # asymmetric_model_path = model_path + "/" + str(cfg["asymmetric_search_model_name"])
         # self.asymmetric_model = joblib.load(asymmetric_model_path)
-        self.asymmetric_model = SentenceTransformer('sentence-transformers/msmarco-distilbert-base-v4')
+        self.asymmetric_model = SentenceTransformer('sentence-transformers/msmarco-distilbert-base-v4',device='cpu')
 
         # Loading Short Descripiton Embedded corpus
         short_description_corpus_path = model_path + "/short_description_corpus_data.pkl"
