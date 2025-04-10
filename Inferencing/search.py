@@ -355,6 +355,8 @@ def run_search(raw_data):
         res.data = json.loads(raw_data)['data']
 
         # Invoking run function of tenant specific object
+        print("#"*50)
+        print(os.path.abspath(os.curdir))
         feedback_data = read_prediction_files("./feedback/")
         print("Feedback data:", feedback_data)
         tenant = TenantSearchClass()
