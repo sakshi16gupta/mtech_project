@@ -345,8 +345,6 @@ def file_operation(process_data,outputlist):
 import traceback
 
 def run_search(raw_data):
-    print("###########################")
-    print(os.path.abspath(os.curdir))
     # Search Response Object
     res = SearchResponse()
     try:
