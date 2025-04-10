@@ -1,6 +1,7 @@
+import os
+os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 import streamlit as st
 import json
-import os
 import sys
 print(sys.path)
 sys.path.append(os.path.abspath(os.curdir)+"/")
