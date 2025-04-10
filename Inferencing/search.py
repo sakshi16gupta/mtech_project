@@ -132,7 +132,7 @@ class TenantSearchClass:
         model_path="/ModelTraining"
 
         # Loading Issue data
-        issue_data_path = "/Preprocessed/processed_dataset.csv"
+        issue_data_path = "processed_dataset.csv"
         self.issue_data = pd.read_csv(issue_data_path)
 
         # Loading Symmetric Semantic Search Model
