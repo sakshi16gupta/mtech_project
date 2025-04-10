@@ -2,7 +2,8 @@ pandas
 streamlit==1.43.2
 nltk
 regex
-sentence-transformers
-accelerate
+sentence-transformers==4.0.2
+accelerate==1.6.0
 joblib
 autocorrect
+torch==2.6.0
