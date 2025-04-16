@@ -1,12 +1,8 @@
 import os
-os.environ["STREAMLIT_WATCHER_TYPE"] = "none"
 import streamlit as st
 import json
-import sys
-print(sys.path)
-sys.path.append(os.path.abspath(os.curdir)+"/")
-from Inferencing.search import run_search
-from Inferencing.feedback import run_feedback
+from search import run_search
+from feedback import run_feedback
 
 st.set_page_config(page_title="Chatbot with Feedback")
 
