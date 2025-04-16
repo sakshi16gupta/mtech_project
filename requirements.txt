@@ -1,9 +1,8 @@
-pandas
+pandas==2.2.3
 streamlit==1.43.2
-nltk
-regex
-sentence-transformers==4.0.2
+nltk==3.9.1
+regex==2024.11.6
+sentence-transformers==4.1.0
 accelerate==1.6.0
-joblib
-autocorrect
-torch==2.6.0
+joblib==1.4.2
+autocorrect==2.6.1
