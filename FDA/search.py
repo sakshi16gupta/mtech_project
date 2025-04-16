@@ -345,9 +345,9 @@ def file_operation(process_data,outputlist):
     return new_record.query_id
 
 import traceback
-@st.cache_resource
 def run_search(raw_data):
     # Search Response Object
+    print("in search")
     res = SearchResponse()
     try:
         # initialising output list
