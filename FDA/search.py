@@ -17,6 +17,7 @@ import nltk
 nltk.download('averaged_perceptron_tagger_eng')
 nltk.download('punkt_tab')
 
+torch.classes.__path__ = []
 # data class for response object of search endpoint
 @dataclass
 class SearchResponse:
@@ -129,7 +130,7 @@ class TenantSearchClass:
         self.CDL_PREDICTION_FOLDER = "/Prediction/US3"
         self.spell: Any
 
-        model_path="/ModelTraining"
+        model_path="."
 
         # Loading Issue data
         issue_data_path = "processed_dataset.csv"
@@ -356,7 +357,7 @@ def run_search(raw_data):
         res.data = json.loads(raw_data)['data']
 
         # Invoking run function of tenant specific object
-        feedback_data = read_prediction_files("Inferencing/feedback/")
+        feedback_data = read_prediction_files("./feedback/")
         print("Feedback data:", feedback_data)
         tenant = TenantSearchClass()
         process_data, combined_results = tenant.tenant_run(res.data,feedback_data)
